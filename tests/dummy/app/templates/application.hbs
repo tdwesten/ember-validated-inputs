@@ -1,5 +1,29 @@
-{{page-title "Dummy"}}
-
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class='m-2'>
+  <ValidatedInput
+    @changeset={{this.changeset}}
+    @valuePath='firstName'
+    @label='First name'
+    @labelClass='block text-sm font-medium text-gray-700 mb-2'
+    class='bg-gray-200 p-4 rounded'
+    @placeholder='Placeholder test'
+    @inputClass='border rounded p-2'
+    @inputErrorClass='border-red-500'
+    @errorMessage='This is an error message'
+    @errorMessageClass='text-red-500 text-sm mt-2'
+    @showErrorMessageOnBlur={{true}}
+  />
+</div><div class='m-2'>
+  <ValidatedInput
+    @changeset={{this.changeset}}
+    @valuePath='lastName'
+    @label='Last name'
+    @labelClass='block text-sm font-medium text-gray-700 mb-2'
+    class='bg-gray-200 p-4 rounded'
+    @placeholder='Placeholder test'
+    @inputClass='border rounded p-2'
+    @inputErrorClass='border-red-500'
+    @errorMessage='This is an error message'
+    @errorMessageClass='text-red-500 text-sm mt-2'
+    @showErrorMessageOnInput={{true}}
+  />
+</div>

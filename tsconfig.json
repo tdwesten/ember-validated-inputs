@@ -1,0 +1,33 @@
+{
+  "extends": "@tsconfig/ember/tsconfig.json",
+  "noEmitOnError": false,
+  "compilerOptions": {
+    "noEmitOnError": false,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "baseUrl": ".",
+    "paths": {
+      "dummy/tests/*": ["tests/*"],
+      "dummy/*": ["tests/dummy/app/*", "app/*"],
+      "ember-validated-inputs": ["addon"],
+      "ember-validated-inputs/*": ["addon/*"],
+      "ember-validated-inputs/test-support": ["addon-test-support"],
+      "ember-validated-inputs/test-support/*": ["addon-test-support/*"],
+      "*": ["types/*"]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "addon/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "test-support/**/*",
+    "addon-test-support/**/*"
+  ]
+}

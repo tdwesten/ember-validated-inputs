@@ -1,0 +1,24 @@
+<div ...attributes>
+  {{#if @label}}
+    <label for={{@name}} class={{@labelClass}}>{{@label}}</label>
+  {{/if}}
+
+  <Input
+    @type={{@type}}
+    @value={{get @changeset @valuePath}}
+    placeholder={{@placeholder}}
+    class={{this.inputClass}}
+    name={{@name}}
+    disabled={{@disabled}}
+    autocomplete={{@autocomplete}}
+    id={{@id}}
+    {{on 'input' this.handleOnInput}}
+    {{on 'blur' this.handleOnBlur}}
+  />
+
+  {{#if this.showErrorMessage}}
+    <aside class={{@errorMessageClass}}>
+      {{this.errorMessage}}
+    </aside>
+  {{/if}}
+</div>
